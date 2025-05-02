@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visioning GH - Crafting digital magic for Ghana's businesses</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Open Sans', sans-serif;
+        }
+        .heading-font {
+            font-family: 'Roboto', sans-serif;
+        }
+        .ghana-flag {
+            background: linear-gradient(135deg, #CE1126 33%, #FCD116 33% 66%, #006B3F 66%);
+        }
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+        }
+        .portfolio-item:hover .portfolio-overlay {
+            opacity: 1;
+        }
+        .nav-link:hover::after {
+            width: 100%;
+        }
+        .nav-link::after {
+            content: '';
+            display: block;
+            width: 0;
+            height: 2px;
+            background: #FCD116;
+            transition: width .3s;
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-md sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex items-center space-x-2">
+                <div class="ghana-flag w-8 h-8 rounded-full"></div>
+                <a href="#" class="heading-font text-xl font-bold text-gray-800">Web Wizards GH</a>
+            </div>
+            
+            <!-- Mobile menu button -->
+            <button id="mobile-menu-button" class="md:hidden text-gray-800 focus:outline-none">
+                <i class="fas fa-bars text-2xl"></i>
+            </button>
+            
+            <!-- Desktop Menu -->
+            <div class="hidden md:flex space-x-8">
+                <a href="#home" class="nav-link text-gray-800 font-medium">Home</a>
+                <a href="#about" class="nav-link text-gray-800 font-medium">About</a>
+                <a href="#services" class="nav-link text-gray-800 font-medium">Services</a>
+                <a href="#portfolio" class="nav-link text-gray-800 font-medium">Portfolio</a>
+                <a href="#contact" class="nav-link text-gray-800 font-medium">Contact</a>
+            </div>
+        </div>
+        
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white py-2 px-4 shadow-lg">
+            <a href="#home" class="block py-2 text-gray-800 font-medium border-b border-gray-100">Home</a>
+            <a href="#about" class="block py-2 text-gray-800 font-medium border-b border-gray-100">About</a>
+            <a href="#services" class="block py-2 text-gray-800 font-medium border-b border-gray-100">Services</a>
+            <a href="#portfolio" class="block py-2 text-gray-800 font-medium border-b border-gray-100">Portfolio</a>
+            <a href="#contact" class="block py-2 text-gray-800 font-medium">Contact</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="py-16 md:py-24 bg-gradient-to-r from-[#006B3F] to-[#CE1126] text-white">
+        <div class="container mx-auto px-4 flex flex-col md:flex-row items-center">
+            <div class="md:w-1/2 mb-10 md:mb-0">
+                <h1 class="heading-font text-4xl md:text-5xl font-bold mb-4">Crafting Digital Magic for Ghana's Businesses</h1>
+                <p class="text-xl mb-8">Affordable web solutions and IT support tailored for Ghanaian startups and small businesses.</p>
+                <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
+                    <a href="#contact" class="bg-[#FCD116] hover:bg-yellow-500 text-gray-900 font-bold py-3 px-6 rounded-full text-center transition duration-300">Get Started</a>
+                    <a href="#services" class="border-2 border-white hover:bg-white hover:text-gray-900 font-bold py-3 px-6 rounded-full text-center transition duration-300">Our Services</a>
+                </div>
+            </div>
+            <div class="md:w-1/2 flex justify-center">
+                <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Ghanaian entrepreneurs working" class="rounded-lg shadow-2xl max-w-full h-auto">
+            </div>
+        </div>
+    </section>
+
+    <!-- Trust Badges -->
+    <section class="py-8 bg-white">
+        <div class="container mx-auto px-4">
+            <p class="text-center text-gray-600 mb-6">Trusted by local businesses across Ghana</p>
+            <div class="flex flex-wrap justify-center items-center gap-8 md:gap-16">
+                <div class="flex items-center">
+                    <i class="fas fa-check-circle text-green-500 text-2xl mr-2"></i>
+                    <span class="font-medium">100% Ghanaian Owned</span>
+                </div>
+                <div class="flex items-center">
+                    <i class="fas fa-users text-blue-500 text-2xl mr-2"></i>
+                    <span class="font-medium">50+ Satisfied Clients</span>
+                </div>
+                <div class="flex items-center">
+                    <i class="fas fa-hand-holding-heart text-red-500 text-2xl mr-2"></i>
+                    <span class="font-medium">Community Support</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Overview -->
+    <section class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <h2 class="heading-font text-3xl font-bold text-center mb-12 text-gray-800">Our Magical Services</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Service 1 -->
+                <div class="service-card bg-white p-6 rounded-lg shadow-md transition duration-300">
+                    <div class="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mb-4">
+                        <i class="fas fa-laptop-code text-red-500 text-2xl"></i>
+                    </div>
+                    <h3 class="heading-font text-xl font-bold mb-2 text-gray-800">Website Design</h3>
+                    <p class="text-gray-600 mb-4">Beautiful, functional websites starting from GHS 800</p>
+                    <a href="#services" class="text-[#CE1126] font-medium flex items-center">
+                        Learn more <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+                
+                <!-- Service 2 -->
+                <div class="service-card bg-white p-6 rounded-lg shadow-md transition duration-300">
+                    <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mb-4">
+                        <i class="fas fa-tools text-green-500 text-2xl"></i>
+                    </div>
+                    <h3 class="heading-font text-xl font-bold mb-2 text-gray-800">IT Hardware Fixing</h3>
+                    <p class="text-gray-600 mb-4">Expert repairs at GHS 40-60/hour</p>
+                    <a href="#services" class="text-[#006B3F] font-medium flex items-center">
+                        Learn more <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+                
+                <!-- Service 3 -->
+                <div class="service-card bg-white p-6 rounded-lg shadow-md transition duration-300">
+                    <div class="w-16 h-16 bg-yellow-100 rounded-full flex items-center justify-center mb-4">
+                        <i class="fas fa-sync-alt text-yellow-500 text-2xl"></i>
+                    </div>
+                    <h3 class="heading-font text-xl font-bold mb-2 text-gray-800">Website Maintenance</h3>
+                    <p class="text-gray-600 mb-4">Peace of mind from GHS 150/month</p>
+                    <a href="#services" class="text-[#FCD116] font-medium flex items-center">
+                        Learn more <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Us -->
+    <section id="about" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-10 md:mb-0 md:pr-10">
+                    <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Our team" class="rounded-lg shadow-lg w-full">
+                </div>
+                <div class="md:w-1/2">
+                    <h2 class="heading-font text-3xl font-bold mb-6 text-gray-800">Our Story</h2>
+                    <p class="text-gray-600 mb-4">Founded in 2022 by two young Ghanaian tech enthusiasts, Web Wizards GH was born from a passion to bridge the digital divide for local businesses.</p>
+                    <p class="text-gray-600 mb-4">We believe every Ghanaian entrepreneur deserves access to quality, affordable web services to compete in today's digital economy.</p>
+                    <p class="text-gray-600 mb-6">Each month, we dedicate 10% of our capacity to pro bono work for community organizations and promising startups that need a digital boost.</p>
+                    
+                    <div class="bg-gray-50 p-6 rounded-lg">
+                        <h3 class="heading-font text-xl font-bold mb-3 text-gray-800">Our Mission</h3>
+                        <p class="text-gray-600 mb-3"><i class="fas fa-check text-[#006B3F] mr-2"></i> Empower Ghanaian businesses with digital tools</p>
+                        <p class="text-gray-600 mb-3"><i class="fas fa-check text-[#006B3F] mr-2"></i> Make technology accessible and affordable</p>
+                        <p class="text-gray-600"><i class="fas fa-check text-[#006B3F] mr-2"></i> Build long-term relationships with our clients</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Details -->
+    <section id="services" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <h2 class="heading-font text-3xl font-bold text-center mb-12 text-gray-800">Detailed Services</h2>
+            
+            <div class="grid grid-cols-1 gap-12">
+                <!-- Service 1 -->
+                <div class="bg-white p-8 rounded-lg shadow-md">
+                    <div class="flex flex-col md:flex-row items-center md:items-start">
+                        <div class="md:w-1/4 mb-6 md:mb-0 flex justify-center">
+                            <div class="w-20 h-20 bg-red-100 rounded-full flex items-center justify-center">
+                                <i class="fas fa-laptop-code text-red-500 text-3xl"></i>
+                            </div>
+                        </div>
+                        <div class="md:w-3/4">
+                            <h3 class="heading-font text-2xl font-bold mb-3 text-gray-800">Website Design & Development</h3>
+                            <p class="text-gray-600 mb-4">We create beautiful, functional websites tailored to your business needs. Our websites are mobile-friendly, fast-loading, and optimized for Ghanaian internet conditions.</p>
+                            <div class="bg-red-50 p-4 rounded-lg mb-4">
+                                <p class="font-bold text-red-700 mb-2">Pricing: GHS 800–1,000</p>
+                                <p class="text-gray-600">Includes domain registration (1 year), hosting (1 year), 5 pages, basic SEO setup, and 1 month free maintenance.</p>
+                            </div>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="bg-gray-100 px-3 py-1 rounded-full text-sm">Responsive Design</span>
+                                <span class="bg-gray-100 px-3 py-1 rounded-full text-sm">Ghana Hosting</span>
+                                <span class="bg-gray-100 px-3 py-1 rounded-full text-sm">SEO Ready</span>
+                                <span class="bg-gray-100 px-3 py-1 rounded-full text-sm">1 Year Support</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Service 2 -->
+                <div class="bg-white p-8 rounded-lg shadow-md">
+                    <div class="flex flex-col md:flex-row items-center md:items-start">
+                        <div class="md:w-1/4 mb-6 md:mb-0 flex justify-center">
+                            <div class="w-20 h-20 bg-green-100 rounded-full flex items-center justify-center">
+                                <i class="fas fa-tools text-green-500 text-3xl"></i>
+                            </div>
+                        </div>
+                        <div class="md:w-3/4">
+                            <h3 class="heading-font text-2xl font-bold mb-3 text-gray-800">IT Hardware Fixing</h3>
+                            <p class="text-gray-600 mb-4">Our certified technicians provide on-site and remote support for all your hardware issues. We source quality replacement parts locally to keep costs down.</p>
+                            <div class="bg-green-50 p-4 rounded-lg mb-4">
+                                <p class="font-bold text-green-700 mb-2">Pricing: GHS 40–60/hour</p>
+                                <p class="text-gray-600">Free diagnosis for first-time clients. Discounts available for regular maintenance contracts.</p>
+                            </div>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="bg-gray-100 px-3 py-1 rounded-full text-sm">Laptop Repair</span>
+                                <span class="bg-gray-100 px-3 py-1 rounded-full text-sm">Desktop Support</span>
+                                <span class="bg-gray-100 px-3 py-1 rounded-full text-sm">Printer Setup</span>
+                                <span class="bg-gray-100 px-3 py-1 rounded-full text-sm">Network Issues</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Service 3 -->
+                <div class="bg-white p-8 rounded-lg shadow-md">
+                    <div class="flex flex-col md:flex-row items-center md:items-start">
+                        <div class="md:w-1/4 mb-6 md:mb-0 flex justify-center">
+                            <div class="w-20 h-20 bg-yellow-100 rounded-full flex items-center justify-center">
+                                <i class="fas fa-sync-alt text-yellow-500 text-3xl"></i>
+                            </div>
+                        </div>
+                        <div class="md:w-3/4">
+                            <h3 class="heading-font text-2xl font-bold mb-3 text-gray-800">Website Maintenance</h3>
+                            <p class="text-gray-600 mb-4">Keep your website secure, updated, and running smoothly with our monthly maintenance plans. We'll handle the technical stuff so you can focus on your business.</p>
+                            <div class="bg-yellow-50 p-4 rounded-lg mb-4">
+                                <p class="font-bold text-yellow-700 mb-2">Pricing: GHS 150–200/month</p>
+                                <p class="text-gray-600">Includes weekly backups, security updates, content updates (up to 5 pages), uptime monitoring, and performance optimization.</p>
+                            </div>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="bg-gray-100 px-3 py-1 rounded-full text-sm">Security Updates</span>
+                                <span class="bg-gray-100 px-3 py-1 rounded-full text-sm">Content Updates</span>
+                                <span class="bg-gray-100 px-3 py-1 rounded-full text-sm">Backups</span>
+                                <span class="bg-gray-100 px-3 py-1 rounded-full text-sm">24/7 Monitoring</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio -->
+    <section id="portfolio" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="heading-font text-3xl font-bold text-center mb-12 text-gray-800">Our Recent Work</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <!-- Project 1 -->
+                <div class="portfolio-item relative rounded-lg overflow-hidden shadow-lg">
+                    <img src="https://images.unsplash.com/photo-1556740738-b6a63e27c4df?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Fashion Boutique Website" class="w-full h-64 object-cover">
+                    <div class="portfolio-overlay absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-0 flex items-end p-6 transition duration-300">
+                        <div>
+                            <h3 class="heading-font text-xl font-bold text-white mb-1">Naa's Fashion Boutique</h3>
+                            <p class="text-gray-200 mb-2">E-commerce website with inventory management</p>
+                            <a href="#" class="text-[#FCD116] font-medium flex items-center">
+                                View Project <i class="fas fa-arrow-right ml-2"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 2 -->
+                <div class="portfolio-item relative rounded-lg overflow-hidden shadow-lg">
+                    <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1374&q=80" alt="Restaurant Website" class="w-full h-64 object-cover">
+                    <div class="portfolio-overlay absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-0 flex items-end p-6 transition duration-300">
+                        <div>
+                            <h3 class="heading-font text-xl font-bold text-white mb-1">Tasty Ghana Kitchen</h3>
+                            <p class="text-gray-200 mb-2">Online menu with reservation system</p>
+                            <a href="#" class="text-[#FCD116] font-medium flex items-center">
+                                View Project <i class="fas fa-arrow-right ml-2"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 3 -->
+                <div class="portfolio-item relative rounded-lg overflow-hidden shadow-lg">
+                    <img src="https://images.unsplash.com/photo-1521791136064-7986c2920216?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1469&q=80" alt="Consulting Website" class="w-full h-64 object-cover">
+                    <div class="portfolio-overlay absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-0 flex items-end p-6 transition duration-300">
+                        <div>
+                            <h3 class="heading-font text-xl font-bold text-white mb-1">Accra Business Consultants</h3>
+                            <p class="text-gray-200 mb-2">Professional services website with blog</p>
+                            <a href="#" class="text-[#FCD116] font-medium flex items-center">
+                                View Project <i class="fas fa-arrow-right ml-2"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-12">
+                <a href="#" class="inline-block bg-[#006B3F] hover:bg-green-700 text-white font-bold py-3 px-8 rounded-full transition duration-300">
+                    See More Projects
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <h2 class="heading-font text-3xl font-bold text-center mb-12 text-gray-800">Get In Touch</h2>
+            
+            <div class="flex flex-col md:flex-row bg-white rounded-lg shadow-lg overflow-hidden">
+                <div class="md:w-1/2 p-8 md:p-12">
+                    <h3 class="heading-font text-2xl font-bold mb-6 text-gray-800">Send Us a Message</h3>
+                    <form id="contact-form" class="space-y-4">
+                        <div>
+                            <label for="name" class="block text-gray-700 mb-2">Your Name</label>
+                            <input type="text" id="name" name="name" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#CE1126] focus:border-transparent" required>
+                        </div>
+                        <div>
+                            <label for="email" class="block text-gray-700 mb-2">Email Address</label>
+                            <input type="email" id="email" name="email" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#CE1126] focus:border-transparent" required>
+                        </div>
+                        <div>
+                            <label for="message" class="block text-gray-700 mb-2">Your Message</label>
+                            <textarea id="message" name="message" rows="4" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#CE1126] focus:border-transparent" required></textarea>
+                        </div>
+                        <button type="submit" class="w-full bg-[#CE1126] hover:bg-red-700 text-white font-bold py-3 px-4 rounded-lg transition duration-300">
+                            Send Message
+                        </button>
+                    </form>
+                </div>
+                
+                <div class="md:w-1/2 bg-[#006B3F] text-white p-8 md:p-12">
+                    <h3 class="heading-font text-2xl font-bold mb-6">Contact Information</h3>
+                    <p class="mb-8">We'd love to hear from you! Reach out through any of these channels.</p>
+                    
+                    <div class="space-y-6">
+                        <div class="flex items-start">
+                            <div class="bg-white bg-opacity-20 p-3 rounded-full mr-4">
+                                <i class="fas fa-map-marker-alt text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold mb-1">Our Location</h4>
+                                <p>Accra, Ghana</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="bg-white bg-opacity-20 p-3 rounded-full mr-4">
+                                <i class="fas fa-envelope text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold mb-1">Email Us</h4>
+                                <p>hello@webwizardsgh.com</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="bg-white bg-opacity-20 p-3 rounded-full mr-4">
+                                <i class="fab fa-whatsapp text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold mb-1">WhatsApp</h4>
+                                <p>+233 55 123 4567</p>
+                                <a href="https://wa.me/233551234567" class="inline-block mt-2 bg-white text-[#006B3F] font-bold py-2 px-4 rounded-full transition duration-300">
+                                    Chat Now
+                                </a>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="bg-white bg-opacity-20 p-3 rounded-full mr-4">
+                                <i class="fas fa-clock text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold mb-1">Working Hours</h4>
+                                <p>Monday - Friday: 8:30 AM - 5:30 PM</p>
+                                <p>Saturday: 9:00 AM - 2:00 PM</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <div class="flex items-center space-x-2 mb-4">
+                        <div class="ghana-flag w-8 h-8 rounded-full"></div>
+                        <span class="heading-font text-xl font-bold">Web Wizards GH</span>
+                    </div>
+                    <p class="text-gray-400">Crafting digital magic for Ghana's businesses since 2022.</p>
+                </div>
+                
+                <div>
+                    <h4 class="heading-font text-lg font-bold mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#home" class="text-gray-400 hover:text-white transition duration-300">Home</a></li>
+                        <li><a href="#about" class="text-gray-400 hover:text-white transition duration-300">About Us</a></li>
+                        <li><a href="#services" class="text-gray-400 hover:text-white transition duration-300">Services</a></li>
+                        <li><a href="#portfolio" class="text-gray-400 hover:text-white transition duration-300">Portfolio</a></li>
+                        <li><a href="#contact" class="text-gray-400 hover:text-white transition duration-300">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="heading-font text-lg font-bold mb-4">Services</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">Website Design</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">IT Hardware Support</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">Website Maintenance</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">SEO Services</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">Digital Marketing</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="heading-font text-lg font-bold mb-4">Connect With Us</h4>
+                    <div class="flex space-x-4 mb-4">
+                        <a href="#" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-[#CE1126] transition duration-300">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-[#1DA1F2] transition duration-300">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-[#2867B2] transition duration-300">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-[#E1306C] transition duration-300">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                    </div>
+                    <p class="text-gray-400">Subscribe to our newsletter</p>
+                    <form class="mt-2 flex">
+                        <input type="email" placeholder="Your email" class="px-4 py-2 bg-gray-800 text-white rounded-l-lg focus:outline-none w-full">
+                        <button type="submit" class="bg-[#006B3F] hover:bg-green-700 px-4 rounded-r-lg">
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="pt-8 border-t border-gray-800">
+                <div class="flex flex-col md:flex-row justify-between items-center">
+                    <p class="text-gray-400 mb-4 md:mb-0">© 2023 Web Wizards GH. All rights reserved.</p>
+                    <div class="flex space-x-6">
+                        <a href="#" class="text-gray-400 hover:text-white transition duration-300">Privacy Policy</a>
+                        <a href="#" class="text-gray-400 hover:text-white transition duration-300">Terms of Service</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="back-to-top" class="fixed bottom-8 right-8 w-12 h-12 bg-[#CE1126] text-white rounded-full shadow-lg flex items-center justify-center opacity-0 invisible transition-all duration-300">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- Success Modal -->
+    <div id="success-modal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 opacity-0 invisible transition-opacity duration-300">
+        <div class="bg-white p-8 rounded-lg max-w-md w-full mx-4">
+            <div class="text-center">
+                <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <i class="fas fa-check text-green-500 text-2xl"></i>
+                </div>
+                <h3 class="heading-font text-xl font-bold mb-2">Message Sent!</h3>
+                <p class="text-gray-600 mb-6">Thank you for reaching out. We'll get back to you within 24 hours.</p>
+                <button id="close-modal" class="bg-[#006B3F] hover:bg-green-700 text-white font-bold py-2 px-6 rounded-full transition duration-300">
+                    Close
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Mobile menu toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+        
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                    
+                    // Close mobile menu if open
+                    mobileMenu.classList.add('hidden');
+                }
+            });
+        });
+        
+        // Back to top button
+        const backToTopButton = document.getElementById('back-to-top');
+        
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                backToTopButton.classList.remove('opacity-0', 'invisible');
+                backToTopButton.classList.add('opacity-100', 'visible');
+            } else {
+                backToTopButton.classList.remove('opacity-100', 'visible');
+                backToTopButton.classList.add('opacity-0', 'invisible');
+            }
+        });
+        
+        backToTopButton.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+        
+        // Contact form submission
+        const contactForm = document.getElementById('contact-form');
+        const successModal = document.getElementById('success-modal');
+        const closeModal = document.getElementById('close-modal');
+        
+        contactForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            
+            // Here you would typically send the form data to a server
+            // For this demo, we'll just show the success modal
+            
+            // Reset form
+            contactForm.reset();
+            
+            // Show success modal
+            successModal.classList.remove('opacity-0', 'invisible');
+            successModal.classList.add('opacity-100', 'visible');
+        });
+        
+        closeModal.addEventListener('click', () => {
+            successModal.classList.remove('opacity-100', 'visible');
+            successModal.classList.add('opacity-0', 'invisible');
+        });
+        
+        // Close modal when clicking outside
+        successModal.addEventListener('click', (e) => {
+            if (e.target === successModal) {
+                successModal.classList.remove('opacity-100', 'visible');
+                successModal.classList.add('opacity-0', 'invisible');
+            }
+        });
+    </script>
+</body>
+</html>
